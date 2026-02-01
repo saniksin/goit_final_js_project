@@ -1,23 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Your Energy</title>
+
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <!-- DNS prefetch for API -->
+    <link rel="dns-prefetch" href="https://your-energy.b.goit.study" />
+    <link
+      rel="preconnect"
+      href="https://your-energy.b.goit.study"
+      crossorigin
+    />
+
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
+    <load src="partials/header.html" />
 
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
+    <main class="main">
+      <div class="wrapper">
+        <load src="partials/hero.html" />
+
+        <load src="partials/filters.html" />
+
+        <div class="main-content">
+          <section class="content-area" aria-labelledby="exercises-heading">
+            <h2 id="exercises-heading" class="visually-hidden">
+              Exercises List
+            </h2>
+            <ul
+              id="workouts-container"
+              class="sections-grid"
+              aria-live="polite"
+              aria-busy="false"
+            ></ul>
+            <nav id="pager-container" aria-label="Pagination"></nav>
+          </section>
+
+          <section class="panel" aria-label="Additional information">
+            <load src="partials/quote.html" />
+            <load src="partials/panel-image.html" />
+            <load src="partials/info-tile.html" />
+          </section>
+        </div>
+      </div>
     </main>
 
-    <load src="./partials/footer.html" />
-
+    <load src="partials/footer.html" />
+    <load src="partials/workout-popup.html" />
+    <load src="partials/rating-popup.html" />
+    
     <script type="module" src="./main.js"></script>
   </body>
 </html>

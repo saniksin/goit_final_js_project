@@ -1,0 +1,236 @@
+/* ==========================================================================
+   CARD COMPONENTS
+   Includes: Motivation Card, Info Tile, Panel Image
+   ========================================================================== */
+
+/* ==========================================================================
+   MOTIVATION CARD (Quote)
+   ========================================================================== */
+
+.motivation-card {
+  display: flex;
+  gap: var(--space-20);
+  min-height: 210px;
+  padding: var(--space-20);
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  border-radius: var(--radius-lg);
+}
+
+.motivation-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  background-color: var(--color-light-20);
+  border-radius: var(--radius-full);
+}
+
+.motivation-main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.motivation-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+  margin-bottom: var(--space-16);
+}
+
+.motivation-title {
+  flex: 1;
+  margin: 0;
+  font-size: var(--fs-20);
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--color-light);
+}
+
+.motivation-decoration {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  color: var(--color-light);
+}
+
+.motivation-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.motivation-text {
+  flex: 1;
+  margin: 0;
+  font-size: var(--fs-14);
+  line-height: var(--lh-18);
+  color: var(--color-light-60);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.motivation-author {
+  margin: 0;
+  margin-top: auto;
+  font-size: var(--fs-16);
+  font-weight: 400;
+  line-height: var(--lh-24);
+  color: var(--color-light);
+}
+
+/* ==========================================================================
+   INFO TILE (Daily Norm Card)
+   ========================================================================== */
+
+.info-tile {
+  position: relative;
+  height: 210px;
+  padding: var(--space-20);
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border-radius: var(--radius-lg);
+}
+
+.info-header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-24);
+}
+
+.info-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 34px;
+  height: 32px;
+}
+
+.info-icon::before {
+  content: '';
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background-color: var(--color-black);
+  border-radius: var(--radius-full);
+  z-index: 0;
+}
+
+.info-icon svg {
+  position: relative;
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+  color: var(--color-white);
+}
+
+.info-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--space-16);
+}
+
+.info-time {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.info-time-value {
+  font-size: var(--fs-24);
+  font-weight: 500;
+  line-height: var(--lh-32);
+  color: var(--color-black);
+}
+
+.info-time-label {
+  font-size: var(--fs-14);
+  line-height: var(--lh-18);
+  color: var(--color-dark-65);
+}
+
+.info-text {
+  display: -webkit-box;
+  margin: 0;
+  font-size: var(--fs-14);
+  line-height: var(--lh-18);
+  color: var(--color-black);
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ==========================================================================
+   PANEL (Sidebar Container)
+   ========================================================================== */
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-20);
+  min-height: 702px;
+}
+
+.panel-image-card {
+  width: 100%;
+  height: 242px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.panel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   TABLET (768px+)
+   ========================================================================== */
+
+@media (min-width: 768px) {
+  .motivation-card {
+    min-height: 249px;
+    padding: var(--space-40);
+  }
+
+  .info-tile {
+    min-height: 249px;
+    padding: var(--space-40);
+  }
+
+  .panel {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: var(--space-32) var(--space-16);
+  }
+}
+
+/* ==========================================================================
+   DESKTOP (1440px+)
+   ========================================================================== */
+
+@media (min-width: 1440px) {
+  .panel {
+    display: flex;
+    flex-direction: column;
+    order: -1;
+    gap: var(--space-32);
+    max-width: 444px;
+  }
+
+  .motivation-card,
+  .info-tile,
+  .panel-image-card {
+    min-height: 242px;
+  }
+}

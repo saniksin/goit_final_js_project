@@ -1,0 +1,355 @@
+/* ==========================================================================
+   GRID LAYOUTS
+   Main content layout, sections grid, workouts grid
+   ========================================================================== */
+
+/* ==========================================================================
+   MAIN CONTENT LAYOUT
+   ========================================================================== */
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.content-area {
+  flex: 1;
+  padding-bottom: var(--space-64);
+}
+
+/* ==========================================================================
+   CATEGORIES (SECTIONS) GRID
+   ========================================================================== */
+
+.sections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+  gap: var(--space-32) 15px;
+  width: 100%;
+  justify-content: center;
+  min-height: 0;
+}
+
+.section-tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-width: 225px;
+  min-height: 225px;
+  background: #ececec;
+  border-radius: var(--space-12);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.section-tile:focus {
+  outline: 2px solid var(--color-light);
+  outline-offset: 2px;
+}
+
+.section-tile-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.section-tile-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgb(17 17 17 / 0.5), rgb(17 17 17 / 0.5));
+  z-index: 2;
+}
+
+.section-tile-content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  text-align: center;
+}
+
+.section-name {
+  margin: 0;
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: var(--fs-24);
+  line-height: var(--lh-24);
+  text-transform: capitalize;
+  color: var(--color-light);
+  white-space: nowrap;
+}
+
+.section-type {
+  margin: 0;
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: var(--fs-12);
+  line-height: var(--lh-18);
+  color: var(--color-light-65);
+}
+
+/* ==========================================================================
+   WORKOUTS (EXERCISES) GRID
+   ========================================================================== */
+
+.workouts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(344px, 1fr));
+  gap: var(--space-20);
+  width: 100%;
+}
+
+.workout-tile {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: var(--space-16);
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+}
+
+/* Workout Tile Header */
+.workout-tile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.workout-tile-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+}
+
+/* Badge */
+.workout-type-badge {
+  padding: 5px var(--space-8);
+  border: 1px solid var(--color-dark);
+  border-radius: var(--radius-md);
+  font-family: var(--font-main);
+  font-weight: 500;
+  font-size: var(--fs-12);
+  line-height: var(--space-16);
+  color: var(--color-dark);
+}
+
+/* Rating */
+.workout-rating {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: var(--fs-12);
+  line-height: var(--lh-18);
+  color: var(--color-dark);
+}
+
+.workout-rating-star {
+  width: 18px;
+  height: 18px;
+  color: var(--color-star);
+}
+
+/* Hide rating on favorites page */
+.favorites-page .workout-rating {
+  display: none;
+}
+
+/* Delete Button (Favorites only) */
+.bookmark-delete-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: none;
+  border: none;
+  color: var(--color-dark);
+  line-height: 1;
+  cursor: pointer;
+}
+
+.bookmark-delete-btn svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.bookmark-delete-btn:hover {
+  opacity: 0.7;
+}
+
+.bookmark-delete-btn:focus {
+  outline: 2px solid var(--color-dark);
+  outline-offset: 2px;
+}
+
+.favorites-page .bookmark-delete-btn {
+  display: flex;
+}
+
+/* Start Button */
+.workout-start-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  padding: 0;
+  background: transparent;
+  border: none;
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: var(--fs-14);
+  line-height: var(--lh-18);
+  color: var(--color-dark);
+  cursor: pointer;
+  transition: var(--transition-base);
+}
+
+.workout-start-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Workout Tile Body */
+.workout-tile-body {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+  margin: 25px 0 var(--space-16);
+}
+
+.workout-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  background-color: var(--color-dark);
+  border-radius: var(--radius-full);
+  color: var(--color-light);
+}
+
+.workout-tile-title {
+  margin: 0;
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: var(--fs-20);
+  line-height: 1;
+  color: var(--color-dark);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.workout-tile-title::first-letter {
+  text-transform: uppercase;
+}
+
+/* Workout Tile Metadata */
+.workout-tile-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+  overflow: hidden;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  min-width: 0;
+  overflow: hidden;
+  font-family: var(--font-main);
+  font-size: var(--fs-12);
+  line-height: var(--lh-18);
+}
+
+.meta-label {
+  flex-shrink: 0;
+  font-weight: 400;
+  color: var(--color-dark-65);
+}
+
+.meta-value {
+  font-weight: 400;
+  color: var(--color-dark);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.meta-value::first-letter {
+  text-transform: uppercase;
+}
+
+/* No Results Message */
+.no-results {
+  grid-column: 1 / -1;
+  padding: var(--space-40);
+  text-align: center;
+  font-size: var(--fs-18);
+  color: var(--color-dark-60);
+}
+
+/* ==========================================================================
+   TABLET (768px+)
+   ========================================================================== */
+
+@media (min-width: 768px) {
+  .sections-grid {
+    gap: var(--space-32) 14.5px;
+  }
+
+  .workouts-grid {
+    gap: var(--space-32) var(--space-16);
+  }
+
+  .workout-start-btn {
+    font-size: var(--fs-16);
+    line-height: var(--lh-24);
+  }
+
+  .workout-tile-body {
+    margin: 25px 0 var(--space-8);
+  }
+
+  .workout-tile-title {
+    font-size: var(--fs-24);
+    line-height: 30px;
+  }
+}
+
+/* ==========================================================================
+   DESKTOP (1440px+)
+   ========================================================================== */
+
+@media (min-width: 1440px) {
+  .main-content {
+    flex-direction: row;
+    gap: var(--space-32);
+  }
+
+  .content-area {
+    padding-bottom: 0;
+  }
+
+  .sections-grid {
+    grid-template-columns: repeat(3, 290px);
+    gap: var(--space-32) 15px;
+  }
+
+  .section-tile {
+    min-height: 242px;
+  }
+}

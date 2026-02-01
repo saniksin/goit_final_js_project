@@ -1,0 +1,115 @@
+/* ==========================================================================
+   PAGINATION COMPONENT
+   ========================================================================== */
+
+#pager-container,
+#favorites-pager {
+  padding-top: var(--space-32);
+}
+
+.pager-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+/* Page Numbers Container */
+.pager-numbers {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  margin-inline: var(--space-12);
+}
+
+/* Navigation Buttons (First, Prev, Next, Last) */
+.pager-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid var(--color-dark);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: var(--transition-base);
+}
+
+.pager-icon {
+  color: var(--color-dark);
+  transition: var(--transition-base);
+}
+
+.pager-icon.flip {
+  transform: rotate(180deg);
+}
+
+.pager-btn:hover:not(.disabled) {
+  background-color: var(--color-dark);
+  border-color: var(--color-dark);
+}
+
+.pager-btn:hover:not(.disabled) .pager-icon {
+  color: var(--color-white);
+}
+
+.pager-btn.disabled {
+  border-color: var(--color-dark-10);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.pager-btn.disabled .pager-icon {
+  color: var(--color-dark-65);
+}
+
+/* Page Number Buttons */
+.pager-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0;
+  background: none;
+  border: none;
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: var(--fs-24);
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: var(--color-dark-65);
+  cursor: pointer;
+  transition: var(--transition-base);
+}
+
+.pager-number:not(.current):hover {
+  color: var(--color-dark);
+}
+
+/* Current Page Number */
+.pager-number.current {
+  width: 32px;
+  border: 1px solid var(--color-dark);
+  border-radius: var(--radius-full);
+  color: var(--color-dark);
+  cursor: default;
+  pointer-events: none;
+}
+
+/* Ellipsis Dots */
+.pager-dots {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  background: none;
+  border: none;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--color-dark-60);
+  cursor: default;
+  pointer-events: none;
+}

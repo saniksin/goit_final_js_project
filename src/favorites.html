@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favorites | Your Energy</title>
+
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- DNS prefetch for API -->
+    <link rel="dns-prefetch" href="https://your-energy.b.goit.study" />
+    <link
+      rel="preconnect"
+      href="https://your-energy.b.goit.study"
+      crossorigin
+    />
+    <!-- Preload critical fonts -->
+    <link
+      rel="preload"
+      href="./fonts/DMSans-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./fonts/DMSans-Medium.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  </head>
+  <body>
+    <load src="partials/header.html" />
+
+    <main class="main favorites-page">
+      <div class="wrapper">
+        <div class="filters-section">
+          <h2 class="section-title" id="favorites-heading">Favorites</h2>
+        </div>
+
+        <div class="favorites-content">
+          <div class="favorites-sidebar" aria-label="Additional information">
+            <load src="partials/quote.html" />
+            <article class="favorites-info-card">
+              <header class="favorites-info-header">
+                <span class="favorites-info-icon" aria-hidden="true">
+                  <svg width="20" height="20">
+                    <use href="/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </span>
+                <div class="favorites-info-content">
+                  <p class="favorites-info-value">110 min</p>
+                  <p class="favorites-info-label">Daily norm of sports</p>
+                </div>
+              </header>
+            </article>
+            <div class="favorites-image-card" aria-hidden="true">
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                  srcset="/img/webp/m_fav.webp 1x, /img/webp/m_fav@2x.webp 2x"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                  srcset="/img/m_fav.jpg 1x, /img/m_fav@2x.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px) and (max-width: 1439px)"
+                  type="image/webp"
+                  srcset="/img/webp/t_fav.webp 1x, /img/webp/t_fav@2x.webp 2x"
+                />
+                <source
+                  media="(min-width: 768px) and (max-width: 1439px)"
+                  type="image/jpeg"
+                  srcset="/img/t_fav.jpg 1x, /img/t_fav@2x.jpg 2x"
+                />
+                <source
+                  media="(min-width: 1440px)"
+                  type="image/webp"
+                  srcset="/img/webp/d_fav.webp 1x, /img/webp/d_fav@2x.webp 2x"
+                />
+                <source
+                  media="(min-width: 1440px)"
+                  type="image/jpeg"
+                  srcset="/img/d_fav.jpg 1x, /img/d_fav@2x.jpg 2x"
+                />
+                <img
+                  src="/img/d_fav.jpg"
+                  alt="Women doing sports"
+                  class="favorites-image"
+                  width="335"
+                  height="571"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+          </div>
+
+          <section class="favorites-main" aria-labelledby="favorites-heading">
+            <ul
+              id="favorites-container"
+              class="favorites-list"
+              aria-live="polite"
+              aria-busy="false"
+            ></ul>
+            <nav
+              id="favorites-pagination"
+              class="favorites-pagination"
+              aria-label="Favorites pagination"
+            ></nav>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <load src="partials/workout-popup.html" />
+    <load src="partials/rating-popup.html" />
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

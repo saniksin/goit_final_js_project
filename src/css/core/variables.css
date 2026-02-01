@@ -1,0 +1,93 @@
+/* ==========================================================================
+   CSS CUSTOM PROPERTIES (Variables)
+   ========================================================================== */
+
+:root {
+  /* Colors */
+  --color-dark: #242424;
+  --color-light: #f4f4f4;
+  --color-white: #fff;
+  --color-black: #242424;
+  --color-star: #eea10c;
+  --color-error: #f04438;
+  --color-success: #12b76a;
+
+  /* Color Variations */
+  --color-dark-80: rgb(36 36 36 / 0.8);
+  --color-dark-65: rgb(36 36 36 / 0.65);
+  --color-dark-60: rgb(36 36 36 / 0.6);
+  --color-dark-10: rgb(36 36 36 / 0.1);
+  --color-light-80: rgb(244 244 244 / 0.8);
+  --color-light-65: rgb(244 244 244 / 0.65);
+  --color-light-60: rgb(244 244 244 / 0.6);
+  --color-light-40: rgb(244 244 244 / 0.4);
+  --color-light-30: rgb(244 244 244 / 0.3);
+  --color-light-20: rgb(244 244 244 / 0.2);
+  --color-light-10: rgb(244 244 244 / 0.1);
+
+  /* Overlay */
+  --color-overlay: rgb(0 0 0 / 0.5);
+  --color-footer-text: #c6cdd1;
+
+  /* Typography */
+  --font-main: 'DM Sans', sans-serif;
+  --font-display: 'Neue Montreal', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Font Sizes */
+  --fs-12: 12px;
+  --fs-14: 14px;
+  --fs-16: 16px;
+  --fs-18: 18px;
+  --fs-20: 20px;
+  --fs-24: 24px;
+  --fs-28: 28px;
+  --fs-38: 38px;
+  --fs-44: 44px;
+  --fs-56: 56px;
+  --fs-74: 74px;
+
+  /* Line Heights */
+  --lh-18: 1.125rem;
+  --lh-24: 1.5rem;
+  --lh-32: 2rem;
+  --lh-38: 2.375rem;
+  --lh-48: 3rem;
+  --lh-60: 3.75rem;
+  --lh-74: 4.625rem;
+
+  /* Letter Spacing */
+  --ls-tight: -0.02em;
+
+  /* Spacing */
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-64: 64px;
+
+  /* Border Radius */
+  --radius-sm: 10px;
+  --radius-md: 15px;
+  --radius-lg: 20px;
+  --radius-xl: 30px;
+  --radius-2xl: 60px;
+  --radius-full: 50%;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 300ms ease-in-out;
+
+  /* Z-Index Scale */
+  --z-dropdown: 10;
+  --z-modal: 100;
+  --z-toast: 9999;
+
+  /* Breakpoints (for reference, use in media queries) */
+  --bp-tablet: 768px;
+  --bp-desktop: 1440px;
+}

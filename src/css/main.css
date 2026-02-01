@@ -1,0 +1,30 @@
+/* ==========================================================================
+   MAIN CSS - Entry Point
+   All styles imported in dependency order
+   ========================================================================== */
+
+/* Normalize */
+@import url('modern-normalize/modern-normalize.css');
+
+/* Core - Variables, Fonts, Base Reset */
+@import url('./core/variables.css');
+@import url('./core/fonts.css');
+@import url('./core/base.css');
+
+/* Components - Reusable UI Elements */
+@import url('./components/buttons.css');
+@import url('./components/cards.css');
+@import url('./components/pagination.css');
+@import url('./components/notifications.css');
+
+/* Layout - Site Structure */
+@import url('./layout/header.css');
+@import url('./layout/footer.css');
+@import url('./layout/grid.css');
+
+/* Pages - Page-specific Styles */
+@import url('./pages/home.css');
+@import url('./pages/favorites.css');
+
+/* Modals */
+@import url('./modals/popup.css');

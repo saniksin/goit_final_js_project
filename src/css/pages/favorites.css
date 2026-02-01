@@ -1,0 +1,243 @@
+/* ==========================================================================
+   FAVORITES PAGE
+   ========================================================================== */
+
+.favorites-page {
+  padding-bottom: 80px;
+}
+
+/* ==========================================================================
+   LAYOUT
+   ========================================================================== */
+
+.favorites-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.favorites-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-20);
+  margin-bottom: var(--space-40);
+}
+
+.favorites-main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================================
+   FAVORITES INFO CARD
+   ========================================================================== */
+
+.favorites-info-card {
+  grid-area: b;
+  height: 119px;
+  padding: var(--space-20);
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border-radius: var(--radius-lg);
+}
+
+.favorites-info-header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-24);
+}
+
+.favorites-info-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 34px;
+  height: 32px;
+}
+
+.favorites-info-icon::before {
+  content: '';
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background-color: var(--color-black);
+  border-radius: var(--radius-full);
+  z-index: 0;
+}
+
+.favorites-info-icon svg {
+  position: relative;
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+  color: var(--color-white);
+}
+
+.favorites-info-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.favorites-info-value {
+  margin: 0;
+  font-size: var(--fs-24);
+  font-weight: 500;
+  line-height: var(--lh-32);
+  color: var(--color-black);
+}
+
+.favorites-info-label {
+  margin: 0;
+  font-size: var(--fs-14);
+  line-height: var(--lh-18);
+  color: var(--color-dark-65);
+}
+
+/* ==========================================================================
+   FAVORITES IMAGE CARD
+   ========================================================================== */
+
+.favorites-image-card {
+  grid-area: c;
+  width: 100%;
+  height: 119px;
+  margin: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.favorites-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   FAVORITES GRID
+   ========================================================================== */
+
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-20);
+}
+
+/* Empty State */
+.favorites-grid .favorites-empty {
+  grid-column: 1 / -1;
+}
+
+.favorites-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px var(--space-20);
+  text-align: center;
+}
+
+.favorites-empty-text {
+  max-width: 580px;
+  font-size: var(--fs-18);
+  line-height: var(--lh-24);
+  color: var(--color-dark);
+}
+
+/* ==========================================================================
+   TABLET (768px+)
+   ========================================================================== */
+
+@media (min-width: 768px) {
+  .favorites-grid {
+    gap: var(--space-32) var(--space-16);
+  }
+
+  .favorites-sidebar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 141px;
+    grid-template-areas:
+      'a a'
+      'b c';
+  }
+
+  .favorites-sidebar .motivation-card {
+    grid-area: a;
+  }
+
+  .favorites-image-card,
+  .favorites-info-card {
+    height: 141px;
+  }
+}
+
+/* ==========================================================================
+   DESKTOP (1440px+)
+   ========================================================================== */
+
+@media (min-width: 1440px) {
+  .favorites-content {
+    flex-direction: row;
+    align-items: start;
+    gap: var(--space-32);
+  }
+
+  .favorites-sidebar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: min-content 141px;
+    grid-template-areas:
+      'a a'
+      'b c';
+    flex-shrink: 0;
+    max-width: 494px;
+    margin-bottom: 0;
+  }
+
+  .favorites-sidebar > .motivation-card {
+    max-height: 230px;
+  }
+
+  .favorites-main {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .favorites-list,
+  .favorites-grid {
+    max-height: 487px;
+    padding-right: var(--space-8);
+    overflow-y: auto;
+  }
+
+  /* Custom Scrollbar - WebKit */
+  .favorites-list::-webkit-scrollbar,
+  .favorites-grid::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .favorites-list::-webkit-scrollbar-track,
+  .favorites-grid::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .favorites-list::-webkit-scrollbar-thumb,
+  .favorites-grid::-webkit-scrollbar-thumb {
+    background-color: var(--color-black);
+    border-radius: var(--space-4);
+  }
+
+  /* Firefox Scrollbar */
+  .favorites-list,
+  .favorites-grid {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-black) transparent;
+  }
+
+  /* Hide Pagination on Desktop */
+  .favorites-pager {
+    display: none;
+  }
+}

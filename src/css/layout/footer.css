@@ -1,0 +1,210 @@
+/* ==========================================================================
+   FOOTER - Mobile First
+   ========================================================================== */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-40) var(--space-20) 10px;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+.footer-logo .logo-svg {
+  display: block;
+  width: 132px;
+  height: 14px;
+  color: var(--color-light);
+}
+
+/* Footer Social Links */
+.footer-socials {
+  display: flex;
+  gap: var(--space-12);
+  margin: var(--space-20) 0;
+}
+
+.footer-socials li {
+  display: flex;
+}
+
+.footer-socials .social-link {
+  border: 1px solid var(--color-light-10);
+}
+
+.footer-socials .social-link:hover {
+  background-color: var(--color-light);
+  border-color: #e6e6e6;
+}
+
+.footer-socials .social-icon {
+  color: var(--color-light-80);
+}
+
+.footer-socials .social-link:hover .social-icon {
+  color: var(--color-dark-80);
+}
+
+/* Footer Slogan */
+.footer-slogan {
+  max-width: 596px;
+  margin: 0 0 var(--space-20);
+  font-family: var(--font-display);
+  font-size: var(--fs-38);
+  font-weight: 400;
+  line-height: var(--lh-48);
+  letter-spacing: -1.12px;
+  color: var(--color-light);
+}
+
+/* Footer Subscription */
+.footer-subscription {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-20);
+}
+
+.subscription-title {
+  font-size: var(--fs-14);
+  font-weight: 400;
+  line-height: var(--lh-18);
+  color: var(--color-light);
+}
+
+.subscription-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-20);
+}
+
+.subscription-input {
+  width: 100%;
+  padding: 14px var(--space-24);
+  background: transparent;
+  border: 1px solid var(--color-light-30);
+  border-radius: var(--radius-xl);
+  color: var(--color-light-60);
+  font-size: var(--fs-16);
+}
+
+.subscription-input::placeholder {
+  color: var(--color-light-60);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding-top: 120px;
+}
+
+.footer-rights {
+  font-size: var(--fs-14);
+  line-height: var(--lh-18);
+  letter-spacing: -0.28px;
+  color: var(--color-footer-text);
+  opacity: 0.9;
+}
+
+.footer-nav-list {
+  display: flex;
+  gap: var(--space-8);
+  font-size: var(--fs-14);
+  line-height: var(--lh-18);
+  letter-spacing: -0.28px;
+  color: var(--color-footer-text);
+}
+
+.footer-nav-list li {
+  display: flex;
+  align-items: center;
+}
+
+.footer-nav-list a {
+  transition: var(--transition-base);
+}
+
+.footer-nav-list a:hover {
+  opacity: 0.8;
+}
+
+.footer-copyright {
+  font-size: var(--fs-14);
+  line-height: var(--lh-18);
+  letter-spacing: -0.28px;
+  color: var(--color-footer-text);
+}
+
+/* ==========================================================================
+   TABLET (768px+)
+   ========================================================================== */
+
+@media (min-width: 768px) {
+  .footer {
+    padding: var(--space-64) var(--space-32) var(--space-16);
+  }
+
+  .footer-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'info slogan'
+      '. subscription';
+  }
+
+  .footer-info {
+    grid-area: info;
+  }
+
+  .footer-slogan {
+    grid-area: slogan;
+    margin: 0 0 var(--space-32);
+    font-size: var(--fs-56);
+    line-height: var(--lh-60);
+  }
+
+  .footer-subscription {
+    grid-area: subscription;
+  }
+
+  .subscription-title {
+    font-size: var(--fs-18);
+    line-height: var(--lh-24);
+  }
+
+  .subscription-form {
+    max-width: 352px;
+  }
+
+  .footer-bottom {
+    display: grid;
+    grid-template-columns: 3fr 2fr 1fr;
+    gap: 0;
+  }
+
+  .footer-copyright {
+    text-align: right;
+  }
+}
+
+/* ==========================================================================
+   DESKTOP (1440px+)
+   ========================================================================== */
+
+@media (min-width: 1440px) {
+  .footer-wrapper {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: 'info slogan subscription';
+  }
+
+  .footer-bottom {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+
+  .footer-copyright {
+    text-align: left;
+  }
+}

@@ -1,0 +1,459 @@
+/* ==========================================================================
+   MODAL COMPONENTS
+   Exercise Modal & Rating Modal
+   ========================================================================== */
+
+/* ==========================================================================
+   SHARED MODAL STYLES
+   ========================================================================== */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-overlay);
+}
+
+.modal-content {
+  position: relative;
+  z-index: 1;
+  background: var(--color-dark);
+  border-radius: var(--radius-lg);
+}
+
+/* Close Button */
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: var(--color-light);
+  cursor: pointer;
+}
+
+.modal-close svg {
+  display: block;
+}
+
+.modal-close svg use {
+  stroke: var(--color-light);
+}
+
+.modal-close:hover {
+  opacity: 0.8;
+}
+
+/* ==========================================================================
+   EXERCISE MODAL (Workout Popup)
+   ========================================================================== */
+
+.workout-popup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-20);
+  max-width: 335px;
+  padding: var(--space-40) var(--space-20);
+}
+
+/* Exercise GIF */
+.workout-popup-gif {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 295px;
+  height: 258px;
+  background: linear-gradient(0deg, rgb(4 4 4 / 0.2), rgb(4 4 4 / 0.2));
+  border-radius: var(--space-12);
+  overflow: hidden;
+}
+
+.workout-popup-gif img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Modal Info Section */
+.workout-popup-info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Title */
+.workout-popup-title {
+  margin: 0 0 var(--space-8);
+  font-family: var(--font-main);
+  font-weight: 500;
+  font-size: var(--fs-20);
+  line-height: 1;
+  color: var(--color-light);
+}
+
+.workout-popup-title::first-letter {
+  text-transform: uppercase;
+}
+
+/* Rating */
+.workout-popup-rating {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: var(--space-16);
+}
+
+.rating-value {
+  margin-right: 2px;
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: var(--fs-12);
+  line-height: var(--lh-18);
+  color: var(--color-light);
+}
+
+.rating-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  color: var(--color-light-20);
+}
+
+.star.filled {
+  color: var(--color-star);
+}
+
+/* Divider */
+.workout-popup-separator {
+  width: 100%;
+  height: 1px;
+  margin: 0;
+  background: var(--color-light-20);
+  border: none;
+}
+
+/* Details Grid */
+.workout-popup-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-16);
+  padding: var(--space-8) 0;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  white-space: nowrap;
+}
+
+.detail-label {
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: var(--fs-12);
+  line-height: var(--lh-18);
+  color: var(--color-light-65);
+  white-space: nowrap;
+}
+
+.detail-value {
+  max-width: 80px;
+  font-family: var(--font-main);
+  font-weight: 500;
+  font-size: var(--fs-14);
+  line-height: var(--lh-18);
+  color: var(--color-light);
+}
+
+.detail-value::first-letter {
+  text-transform: uppercase;
+}
+
+/* Description */
+.workout-popup-description {
+  margin: var(--space-20) 0 var(--space-40);
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: var(--fs-14);
+  line-height: var(--lh-18);
+  color: var(--color-light-60);
+}
+
+/* Action Buttons */
+.workout-popup-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#add-to-favorites-btn,
+#give-rating-btn {
+  padding: var(--space-12) var(--space-24);
+}
+
+#add-to-favorites-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  max-width: 100%;
+}
+
+#add-to-favorites-btn .btn-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  letter-spacing: var(--ls-tight);
+}
+
+#add-to-favorites-btn svg {
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   RATING MODAL
+   ========================================================================== */
+
+.rating-popup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 335px;
+  padding: var(--space-40) var(--space-20);
+}
+
+.rating-popup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.rating-popup-title {
+  width: 100%;
+  margin-bottom: var(--space-8);
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: var(--fs-12);
+  line-height: var(--lh-18);
+  color: var(--color-light-40);
+  text-align: left;
+}
+
+.rating-body {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  width: 100%;
+  margin-bottom: var(--space-20);
+}
+
+/* Rating Stars Form - Reverse order for CSS hover trick */
+.rating-stars-form {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.rating-label {
+  position: relative;
+  color: var(--color-light-20);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.rating-label svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+/* Radio input positioned over the star, transparent but clickable */
+.rating-radio {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Hover: highlight hovered star and all previous (via ~ on reversed order) */
+.rating-label:hover,
+.rating-label:hover ~ .rating-label {
+  color: var(--color-star);
+}
+
+/* Checked state: highlight checked label and all following (reversed order) */
+.rating-label:has(.rating-radio:checked),
+.rating-label:has(.rating-radio:checked) ~ .rating-label {
+  color: var(--color-star);
+}
+
+/* Focus state */
+.rating-label:has(.rating-radio:focus-visible) {
+  outline: 2px solid var(--color-light);
+  outline-offset: 2px;
+}
+
+.rating-display-value {
+  margin: 0;
+  font-family: var(--font-main);
+  font-weight: 500;
+  font-size: var(--fs-16);
+  line-height: 1.5;
+  color: var(--color-light);
+}
+
+/* Rating Form */
+.rating-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.rating-email-input,
+.rating-review-input {
+  width: 100%;
+  padding: var(--space-12) var(--space-20);
+  background: transparent;
+  border: 1px solid var(--color-light-30);
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: var(--fs-14);
+  line-height: var(--lh-18);
+  color: var(--color-light);
+  transition: var(--transition-base);
+}
+
+.rating-email-input {
+  border-radius: var(--radius-xl);
+}
+
+.rating-review-input {
+  border-radius: var(--radius-md);
+  resize: none;
+}
+
+.rating-email-input::placeholder,
+.rating-review-input::placeholder {
+  color: var(--color-light-60);
+}
+
+.rating-email-input:focus,
+.rating-review-input:focus {
+  outline: none;
+  border-color: var(--color-light);
+}
+
+.rating-email-input.error {
+  border-color: var(--color-error);
+}
+
+.rating-form-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.rating-form-actions .btn {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* ==========================================================================
+   TABLET/DESKTOP (768px+)
+   ========================================================================== */
+
+@media (min-width: 768px) {
+  .modal-close {
+    top: var(--space-16);
+    right: var(--space-16);
+    width: 28px;
+    height: 28px;
+  }
+
+  /* Exercise Modal */
+  .workout-popup {
+    flex-direction: row;
+    gap: var(--space-32);
+    width: 100%;
+    max-width: 708px;
+    padding: var(--space-32);
+  }
+
+  .workout-popup-gif {
+    width: 270px;
+    height: 259px;
+  }
+
+  .workout-popup-title {
+    font-size: var(--fs-24);
+    line-height: var(--lh-32);
+  }
+
+  .workout-popup-actions {
+    flex-direction: row;
+    gap: 7px;
+    margin-top: auto;
+  }
+
+  .workout-popup-description {
+    margin: var(--space-16) 0 var(--space-64);
+  }
+
+  #add-to-favorites-btn {
+    max-width: 192px;
+  }
+
+  /* Rating Modal */
+  .rating-popup {
+    max-width: 430px;
+    padding: var(--space-40);
+  }
+
+  .rating-body {
+    margin-bottom: var(--space-32);
+  }
+
+  .rating-form {
+    gap: var(--space-16);
+  }
+
+  .rating-email-input,
+  .rating-review-input {
+    font-size: var(--fs-16);
+    line-height: var(--lh-24);
+  }
+}

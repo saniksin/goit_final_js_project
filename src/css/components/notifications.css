@@ -1,0 +1,123 @@
+/* ==========================================================================
+   NOTIFICATION COMPONENT
+   ========================================================================== */
+
+#notification-container {
+  position: fixed;
+  top: var(--space-20);
+  right: var(--space-20);
+  z-index: var(--z-toast);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.notification {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  max-width: 350px;
+  padding: 14px var(--space-20);
+  background: var(--color-dark);
+  border: 1px solid var(--color-light-20);
+  border-radius: var(--space-12);
+  color: var(--color-light);
+  font-family: var(--font-main);
+  font-size: var(--fs-14);
+  line-height: var(--lh-18);
+  box-shadow: 0 4px 20px rgb(0 0 0 / 0.3);
+  pointer-events: auto;
+  animation: notification-slide-in var(--transition-slow);
+}
+
+.notification-icon {
+  flex-shrink: 0;
+}
+
+.notification-message {
+  margin: 0;
+}
+
+/* Notification Types */
+.notification-success {
+  border-color: var(--color-success);
+}
+
+.notification-success .notification-icon {
+  color: var(--color-success);
+}
+
+.notification-error {
+  border-color: var(--color-error);
+}
+
+.notification-error .notification-icon {
+  color: var(--color-error);
+}
+
+.notification-warning {
+  border-color: var(--color-star);
+}
+
+.notification-warning .notification-icon {
+  color: var(--color-star);
+}
+
+.notification-info {
+  border-color: var(--color-light);
+}
+
+.notification-info .notification-icon {
+  color: var(--color-light);
+}
+
+/* Fade Out Animation */
+.notification.fade-out {
+  animation: notification-fade-out 0.5s ease-out forwards;
+}
+
+@keyframes notification-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes notification-fade-out {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+/* ==========================================================================
+   MOBILE
+   ========================================================================== */
+
+@media (max-width: 767px) {
+  #notification-container {
+    left: var(--space-20);
+    right: var(--space-20);
+  }
+
+  .notification {
+    max-width: 100%;
+  }
+}
+
+/* ==========================================================================
+   IZITOAST OVERRIDE (if still used)
+   ========================================================================== */
+
+.iziToast-wrapper {
+  z-index: var(--z-toast) !important;
+}
