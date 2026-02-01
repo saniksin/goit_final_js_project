@@ -148,12 +148,6 @@
   transform: translateX(0);
 }
 
-@starting-style {
-  .mobile-menu[open] {
-    transform: translateX(100%);
-  }
-}
-
 .mobile-menu::backdrop {
   background-color: rgb(0 0 0 / 0);
   transition:
@@ -164,12 +158,6 @@
 
 .mobile-menu[open]::backdrop {
   background-color: var(--color-overlay);
-}
-
-@starting-style {
-  .mobile-menu[open]::backdrop {
-    background-color: rgb(0 0 0 / 0);
-  }
 }
 
 .mobile-menu-content {
