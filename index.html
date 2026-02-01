@@ -1,23 +1,23 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Energy</title>
 
     <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="/goit_final_js_project/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/goit_final_js_project/favicon.ico">
 
     <!-- DNS prefetch for API -->
-    <link rel="dns-prefetch" href="https://your-energy.b.goit.study" />
+    <link rel="dns-prefetch" href="https://your-energy.b.goit.study">
     <link
       rel="preconnect"
       href="https://your-energy.b.goit.study"
       crossorigin
-    />
+    >
 
     <script type="module" crossorigin src="/goit_final_js_project/assets/vendor-CLb_lYsF.js"></script>
-    <script type="module" crossorigin src="/goit_final_js_project/assets/main-MCvIjsqy.js"></script>
+    <script type="module" crossorigin src="/goit_final_js_project/assets/main-aOm4MLKp.js"></script>
     <link rel="stylesheet" crossorigin href="/goit_final_js_project/assets/main-UJFE1WKA.css">
   </head>
   <body>
@@ -301,15 +301,15 @@
           </svg>
         </button>
       </form>
-      <ul id="filter-tabs" class="filter-tabs" role="tablist" aria-label="Filter by category">
-        <li role="presentation">
-          <button class="filter-tab active" role="tab" aria-selected="true" data-filter="Muscles">Muscles</button>
+      <ul id="filter-tabs" class="filter-tabs" aria-label="Filter by category">
+        <li>
+          <button class="filter-tab active" data-filter="Muscles" aria-pressed="true">Muscles</button>
         </li>
-        <li role="presentation">
-          <button class="filter-tab" role="tab" aria-selected="false" data-filter="Body parts">Body parts</button>
+        <li>
+          <button class="filter-tab" data-filter="Body parts" aria-pressed="false">Body parts</button>
         </li>
-        <li role="presentation">
-          <button class="filter-tab" role="tab" aria-selected="false" data-filter="Equipment">Equipment</button>
+        <li>
+          <button class="filter-tab" data-filter="Equipment" aria-pressed="false">Equipment</button>
         </li>
       </ul>
     </div>
@@ -340,7 +340,7 @@
   </span>
   <div class="motivation-main">
     <div class="motivation-header">
-      <p class="motivation-title">Quote of the day</p>
+      <h3 class="motivation-title">Quote of the day</h3>
       <svg class="motivation-decoration" aria-hidden="true">
         <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-quote-bg"></use>
       </svg>
@@ -518,7 +518,7 @@
             title="Please enter a valid email address (e.g., example@domain.com)"
             class="subscription-input"
             autocomplete="email"
-          />
+          >
           <button type="submit" class="btn btn-outline">Send</button>
         </form>
       </div>
@@ -553,7 +553,7 @@
       src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%3E%3C/svg%3E"
       alt="Exercise demonstration"
       loading="lazy"
-    />
+    >
   </div>
 
   <div class="workout-popup-info">
@@ -625,7 +625,7 @@
       </div>
     </div>
 
-    <hr class="workout-popup-separator" />
+    <hr class="workout-popup-separator">
 
     <dl class="workout-popup-details">
       <div class="detail-item">
@@ -650,7 +650,7 @@
       </div>
     </dl>
     
-    <hr class="workout-popup-separator" />
+    <hr class="workout-popup-separator">
 
     <p class="workout-popup-description" id="modal-description">
       This refers to your core muscles, which include the rectus abdominis,
@@ -701,35 +701,40 @@
           <p class="rating-display-value" id="rating-display-value">0.0</p>
 
           <fieldset class="rating-stars-form" id="rating-stars" aria-label="Rating stars">
-            <label class="rating-label" aria-label="5 stars">
+            <label class="rating-label">
+              <span class="visually-hidden">5 stars</span>
               <input type="radio" name="rating" value="5" class="rating-radio" required>
               <svg width="24" height="24" aria-hidden="true">
                 <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-star"></use>
               </svg>
             </label>
 
-            <label class="rating-label" aria-label="4 stars">
+            <label class="rating-label">
+              <span class="visually-hidden">4 stars</span>
               <input type="radio" name="rating" value="4" class="rating-radio">
               <svg width="24" height="24" aria-hidden="true">
                 <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-star"></use>
               </svg>
             </label>
 
-            <label class="rating-label" aria-label="3 stars">
+            <label class="rating-label">
+              <span class="visually-hidden">3 stars</span>
               <input type="radio" name="rating" value="3" class="rating-radio">
               <svg width="24" height="24" aria-hidden="true">
                 <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-star"></use>
               </svg>
             </label>
 
-            <label class="rating-label" aria-label="2 stars">
+            <label class="rating-label">
+              <span class="visually-hidden">2 stars</span>
               <input type="radio" name="rating" value="2" class="rating-radio">
               <svg width="24" height="24" aria-hidden="true">
                 <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-star"></use>
               </svg>
             </label>
 
-            <label class="rating-label" aria-label="1 star">
+            <label class="rating-label">
+              <span class="visually-hidden">1 star</span>
               <input type="radio" name="rating" value="1" class="rating-radio">
               <svg width="24" height="24" aria-hidden="true">
                 <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-star"></use>
