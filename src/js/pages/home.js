@@ -10,6 +10,7 @@ import { openExerciseModal } from '../ui/exercise-modal.js';
 import { initMotivation } from '../services/motivation.js';
 import { attachOnce, $ } from '../utils/dom.js';
 import { getCategoriesLimit, getExercisesLimit, onResize } from '../utils/responsive.js';
+import { runAfterLoad } from '../utils/scheduler.js';
 
 // Page state
 const state = {
@@ -267,19 +268,21 @@ function setupResizeListener() {
 /**
  * Initialize home page
  */
-export async function initHomePage() {
+export function initHomePage() {
   const mainContent = document.querySelector('.main-content');
 
-  try {
-    await initMotivation();
-    await fetchAndRender();
-  } catch (err) {
-    console.error('Error initializing home page:', err);
-  } finally {
-    if (mainContent) {
-      mainContent.classList.add('loaded');
-    }
+  if (mainContent) {
+    mainContent.classList.add('loaded');
   }
+
+  runAfterLoad(async () => {
+    try {
+      await initMotivation();
+      await fetchAndRender();
+    } catch (err) {
+      console.error('Error initializing home page:', err);
+    }
+  });
 
   setupFilterTabs();
   setupWorkoutContainer();

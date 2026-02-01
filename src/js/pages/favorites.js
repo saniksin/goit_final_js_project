@@ -10,6 +10,7 @@ import { closePopup } from '../ui/modal.js';
 import { initMotivation } from '../services/motivation.js';
 import { attachOnce, $ } from '../utils/dom.js';
 import { getFavoritesPerPage, shouldPaginateFavorites, onResize } from '../utils/responsive.js';
+import { runAfterLoad } from '../utils/scheduler.js';
 
 // Page state
 const state = {
@@ -132,21 +133,23 @@ function setupResizeListener() {
 /**
  * Initialize favorites page
  */
-export async function initFavoritesPage() {
+export function initFavoritesPage() {
   const favoritesPage = document.querySelector('.favorites-page');
 
-  try {
-    await initMotivation();
-    await renderFavorites();
-
-    setupFavoritesContainer();
-    setupPager(handlePageChange, 'favorites-pager');
-    setupResizeListener();
-  } catch (err) {
-    console.error('Error initializing favorites page:', err);
-  } finally {
-    if (favoritesPage) {
-      favoritesPage.classList.add('loaded');
-    }
+  if (favoritesPage) {
+    favoritesPage.classList.add('loaded');
   }
+
+  runAfterLoad(async () => {
+    try {
+      await initMotivation();
+      await renderFavorites();
+    } catch (err) {
+      console.error('Error initializing favorites page:', err);
+    }
+  });
+
+  setupFavoritesContainer();
+  setupPager(handlePageChange, 'favorites-pager');
+  setupResizeListener();
 }
