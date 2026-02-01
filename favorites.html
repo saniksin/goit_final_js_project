@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favorites | Your Energy</title>
+
+
+    <!-- DNS prefetch for API -->
+    <link rel="dns-prefetch" href="https://your-energy.b.goit.study" />
+    <link
+      rel="preconnect"
+      href="https://your-energy.b.goit.study"
+      crossorigin
+    />
+    <!-- Preload critical fonts -->
+    <link
+      rel="preload"
+      href="/goit_final_js_project/assets/DMSans-Regular-ByaDs6oo.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/goit_final_js_project/assets/DMSans-Medium-CqupB-j6.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/goit_final_js_project/favicon.ico" />
+    <script type="module" crossorigin src="/goit_final_js_project/assets/vendor-CLb_lYsF.js"></script>
+    <script type="module" crossorigin src="/goit_final_js_project/assets/main-MCvIjsqy.js"></script>
+    <link rel="stylesheet" crossorigin href="/goit_final_js_project/assets/main-UJFE1WKA.css">
+  </head>
+  <body>
+    <header class="header">
+  <div class="wrapper">
+    <a href="./index.html" class="logo" aria-label="Your Energy - Home">
+      <svg class="logo-svg" width="132" height="14" aria-hidden="true">
+        <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#logo"></use>
+      </svg>
+    </a>
+
+    <nav class="navigation" aria-label="Main">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="./index.html" class="nav-link" id="nav-home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="./favorites.html" class="nav-link" id="nav-favorites"
+            >Favorites</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <ul class="socials" aria-label="Social media links">
+      <li>
+        <a
+          href="https://www.facebook.com/goITclub/"
+          class="social-link"
+          aria-label="Facebook"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg class="social-icon" width="28" height="28" aria-hidden="true">
+            <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-facebook"></use>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.instagram.com/goitclub/"
+          class="social-link"
+          aria-label="Instagram"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg class="social-icon" width="28" height="28" aria-hidden="true">
+            <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-instagram"></use>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.youtube.com/c/GoIT"
+          class="social-link"
+          aria-label="YouTube"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg class="social-icon" width="28" height="28" aria-hidden="true">
+            <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-youtube"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+
+    <button
+      type="button"
+      class="burger-btn"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      id="burger-btn"
+    >
+      <svg class="burger-icon" width="32" height="32" aria-hidden="true">
+        <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-burger"></use>
+      </svg>
+    </button>
+
+    <dialog class="mobile-menu" id="mobile-menu" aria-label="Menu">
+      <div class="mobile-menu-content">
+        <button
+          type="button"
+          class="mobile-close-btn"
+          aria-label="Close menu"
+          id="mobile-close-btn"
+        >
+          <svg class="close-icon" width="32" height="32" aria-hidden="true">
+            <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-close"></use>
+          </svg>
+        </button>
+
+        <nav aria-label="Main">
+          <ul class="mobile-nav-list">
+            <li class="mobile-nav-item">
+              <a href="./index.html" class="mobile-nav-link">Home</a>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="./favorites.html" class="mobile-nav-link">Favorites</a>
+            </li>
+          </ul>
+        </nav>
+
+        <ul class="mobile-socials footer-socials" aria-label="Social media links">
+          <li>
+            <a
+              href="https://www.facebook.com/goITclub/"
+              class="social-link"
+              aria-label="Facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                class="social-icon"
+                width="28"
+                height="28"
+                aria-hidden="true"
+              >
+                <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/goitclub/"
+              class="social-link"
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                class="social-icon"
+                width="28"
+                height="28"
+                aria-hidden="true"
+              >
+                <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/c/GoIT"
+              class="social-link"
+              aria-label="YouTube"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                class="social-icon"
+                width="28"
+                height="28"
+                aria-hidden="true"
+              >
+                <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-youtube"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </dialog>
+  </div>
+</header>
+
+
+    <main class="main favorites-page">
+      <div class="wrapper">
+        <div class="filters-section">
+          <h2 class="section-title" id="favorites-heading">Favorites</h2>
+        </div>
+
+        <div class="favorites-content">
+          <div class="favorites-sidebar" aria-label="Additional information">
+            <article class="motivation-card">
+  <span class="motivation-icon" aria-hidden="true">
+    <svg width="20" height="20">
+      <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-quote"></use>
+    </svg>
+  </span>
+  <div class="motivation-main">
+    <div class="motivation-header">
+      <p class="motivation-title">Quote of the day</p>
+      <svg class="motivation-decoration" aria-hidden="true">
+        <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-quote-bg"></use>
+      </svg>
+    </div>
+    <blockquote id="motivation-text" class="motivation-text">
+      A lot of times I find that people who are blessed with the most talent don't ever develop that
+      attitude, and the ones who aren't blessed in that way are the most competitive and have the
+      biggest heart.
+    </blockquote>
+    <cite id="motivation-author" class="motivation-author">Tom Brady</cite>
+  </div>
+</article>
+
+            <article class="favorites-info-card">
+              <header class="favorites-info-header">
+                <span class="favorites-info-icon" aria-hidden="true">
+                  <svg width="20" height="20">
+                    <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-info"></use>
+                  </svg>
+                </span>
+                <div class="favorites-info-content">
+                  <p class="favorites-info-value">110 min</p>
+                  <p class="favorites-info-label">Daily norm of sports</p>
+                </div>
+              </header>
+            </article>
+            <div class="favorites-image-card" aria-hidden="true">
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                  srcset="/goit_final_js_project/assets/m_fav-Bq1bTSSQ.webp 1x, /goit_final_js_project/assets/m_fav@2x-BM_hrmuK.webp 2x"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                  srcset="/goit_final_js_project/assets/m_fav-B6LszAKL.jpg 1x, /goit_final_js_project/assets/m_fav@2x-BRwCW1EO.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px) and (max-width: 1439px)"
+                  type="image/webp"
+                  srcset="/goit_final_js_project/assets/t_fav-BApM-AkA.webp 1x, /goit_final_js_project/assets/t_fav@2x-Cyg6tGbq.webp 2x"
+                />
+                <source
+                  media="(min-width: 768px) and (max-width: 1439px)"
+                  type="image/jpeg"
+                  srcset="/goit_final_js_project/assets/t_fav-BKDaeY-w.jpg 1x, /goit_final_js_project/assets/t_fav@2x-CPZ9TK5K.jpg 2x"
+                />
+                <source
+                  media="(min-width: 1440px)"
+                  type="image/webp"
+                  srcset="/goit_final_js_project/assets/d_fav-gm5d1oCM.webp 1x, /goit_final_js_project/assets/d_fav@2x-D7o77yLJ.webp 2x"
+                />
+                <source
+                  media="(min-width: 1440px)"
+                  type="image/jpeg"
+                  srcset="/goit_final_js_project/assets/d_fav-CT1UkTAR.jpg 1x, /goit_final_js_project/assets/d_fav@2x-7Yc6muYS.jpg 2x"
+                />
+                <img
+                  src="/goit_final_js_project/assets/d_fav-CT1UkTAR.jpg"
+                  alt="Women doing sports"
+                  class="favorites-image"
+                  width="335"
+                  height="571"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+          </div>
+
+          <section class="favorites-main" aria-labelledby="favorites-heading">
+            <ul
+              id="favorites-container"
+              class="favorites-list"
+              aria-live="polite"
+              aria-busy="false"
+            ></ul>
+            <nav
+              id="favorites-pagination"
+              class="favorites-pagination"
+              aria-label="Favorites pagination"
+            ></nav>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <div class="modal hidden" id="workout-modal" role="dialog" aria-modal="true">
+  <div class="modal-backdrop" id="workout-modal-backdrop"></div>
+  <div class="modal-content workout-popup" id="workout-popup">
+  <button class="modal-close" id="modal-close-btn" aria-label="Close details">
+    <svg width="28" height="28" aria-hidden="true">
+      <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-close"></use>
+    </svg>
+  </button>
+
+  <div class="workout-popup-gif">
+    <img
+      id="modal-workout-gif"
+      src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%3E%3C/svg%3E"
+      alt="Exercise demonstration"
+      loading="lazy"
+    />
+  </div>
+
+  <div class="workout-popup-info">
+    <h2 class="workout-popup-title" id="modal-workout-title">Air bake</h2>
+
+    <div class="workout-popup-rating" id="modal-workout-rating">
+      <span class="rating-value">4.0</span>
+      <div class="rating-stars" aria-hidden="true">
+        <svg
+          class="star filled"
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+        >
+          <path
+            d="M9 1.5L11.3175 6.195L16.5 6.9525L12.75 10.605L13.635 15.765L9 13.3275L4.365 15.765L5.25 10.605L1.5 6.9525L6.6825 6.195L9 1.5Z"
+            fill="#EEA10C"
+          />
+        </svg>
+        <svg
+          class="star filled"
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+        >
+          <path
+            d="M9 1.5L11.3175 6.195L16.5 6.9525L12.75 10.605L13.635 15.765L9 13.3275L4.365 15.765L5.25 10.605L1.5 6.9525L6.6825 6.195L9 1.5Z"
+            fill="#EEA10C"
+          />
+        </svg>
+        <svg
+          class="star filled"
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+        >
+          <path
+            d="M9 1.5L11.3175 6.195L16.5 6.9525L12.75 10.605L13.635 15.765L9 13.3275L4.365 15.765L5.25 10.605L1.5 6.9525L6.6825 6.195L9 1.5Z"
+            fill="#EEA10C"
+          />
+        </svg>
+        <svg
+          class="star filled"
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+        >
+          <path
+            d="M9 1.5L11.3175 6.195L16.5 6.9525L12.75 10.605L13.635 15.765L9 13.3275L4.365 15.765L5.25 10.605L1.5 6.9525L6.6825 6.195L9 1.5Z"
+            fill="#EEA10C"
+          />
+        </svg>
+        <svg
+          class="star"
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+        >
+          <path
+            d="M9 1.5L11.3175 6.195L16.5 6.9525L12.75 10.605L13.635 15.765L9 13.3275L4.365 15.765L5.25 10.605L1.5 6.9525L6.6825 6.195L9 1.5Z"
+            fill="rgba(244, 244, 244, 0.2)"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <hr class="workout-popup-separator" />
+
+    <dl class="workout-popup-details">
+      <div class="detail-item">
+        <dt class="detail-label">Target</dt>
+        <dd class="detail-value" id="modal-target">Abs</dd>
+      </div>
+      <div class="detail-item">
+        <dt class="detail-label">Body Part</dt>
+        <dd class="detail-value" id="modal-bodypart">Waist</dd>
+      </div>
+      <div class="detail-item">
+        <dt class="detail-label">Equipment</dt>
+        <dd class="detail-value" id="modal-equipment">Body weight</dd>
+      </div>
+      <div class="detail-item">
+        <dt class="detail-label">Popular</dt>
+        <dd class="detail-value" id="modal-popular">150</dd>
+      </div>
+      <div class="detail-item">
+        <dt class="detail-label">Burned calories</dt>
+        <dd class="detail-value" id="modal-calories">323/3 min</dd>
+      </div>
+    </dl>
+    
+    <hr class="workout-popup-separator" />
+
+    <p class="workout-popup-description" id="modal-description">
+      This refers to your core muscles, which include the rectus abdominis,
+      obliques, and transverse abdominis. They're essential for maintaining
+      posture, stability, and generating force in many movements. Exercises
+      that target the abs include crunches, leg raises, and planks.
+    </p>
+
+    <div class="workout-popup-actions">
+      <button class="btn btn-outline" id="add-to-favorites-btn">
+        <span class="btn-text">Add to favorites</span>
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M10 3.5C10 3.5 6.5 1 3.5 3.5C0.5 6 2 10 10 16.5C18 10 19.5 6 16.5 3.5C13.5 1 10 3.5 10 3.5Z"
+            stroke="currentColor"
+            stroke-width="1.5"
+          />
+        </svg>
+      </button>
+      <button class="btn btn-outline" id="give-rating-btn">
+        Give a rating
+      </button>
+    </div>
+  </div>
+  </div>
+</div>
+
+    <div class="modal hidden" id="rating-modal" role="dialog" aria-modal="true">
+  <div class="modal-backdrop" id="rating-modal-backdrop"></div>
+  <div class="modal-content rating-popup" id="rating-popup">
+    <button type="button" class="modal-close" id="rating-popup-close-btn" aria-label="Close rating modal">
+      <svg width="28" height="28" aria-hidden="true">
+        <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-close"></use>
+      </svg>
+    </button>
+
+    <div class="rating-popup-content">
+      <form id="rating-form" class="rating-form">
+        <p class="rating-popup-title" id="rating-popup-title">Rating</p>
+
+        <div class="rating-body">
+          <p class="rating-display-value" id="rating-display-value">0.0</p>
+
+          <fieldset class="rating-stars-form" id="rating-stars" aria-label="Rating stars">
+            <label class="rating-label" aria-label="5 stars">
+              <input type="radio" name="rating" value="5" class="rating-radio" required>
+              <svg width="24" height="24" aria-hidden="true">
+                <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-star"></use>
+              </svg>
+            </label>
+
+            <label class="rating-label" aria-label="4 stars">
+              <input type="radio" name="rating" value="4" class="rating-radio">
+              <svg width="24" height="24" aria-hidden="true">
+                <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-star"></use>
+              </svg>
+            </label>
+
+            <label class="rating-label" aria-label="3 stars">
+              <input type="radio" name="rating" value="3" class="rating-radio">
+              <svg width="24" height="24" aria-hidden="true">
+                <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-star"></use>
+              </svg>
+            </label>
+
+            <label class="rating-label" aria-label="2 stars">
+              <input type="radio" name="rating" value="2" class="rating-radio">
+              <svg width="24" height="24" aria-hidden="true">
+                <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-star"></use>
+              </svg>
+            </label>
+
+            <label class="rating-label" aria-label="1 star">
+              <input type="radio" name="rating" value="1" class="rating-radio">
+              <svg width="24" height="24" aria-hidden="true">
+                <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-star"></use>
+              </svg>
+            </label>
+          </fieldset>
+        </div>
+
+        <label for="rating-email" class="visually-hidden">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="rating-email"
+          placeholder="Email"
+          required
+          class="rating-email-input"
+          autocomplete="email"
+        >
+
+        <label for="rating-review" class="visually-hidden">Your comment</label>
+        <textarea
+          name="review"
+          id="rating-review"
+          placeholder="Your comment"
+          class="rating-review-input"
+          rows="3"
+        ></textarea>
+
+        <div class="rating-form-actions">
+          <button type="submit" class="btn btn-outline">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+  </body>
+</html>

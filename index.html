@@ -1,0 +1,771 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Energy</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/goit_final_js_project/favicon.ico" />
+
+    <!-- DNS prefetch for API -->
+    <link rel="dns-prefetch" href="https://your-energy.b.goit.study" />
+    <link
+      rel="preconnect"
+      href="https://your-energy.b.goit.study"
+      crossorigin
+    />
+
+    <script type="module" crossorigin src="/goit_final_js_project/assets/vendor-CLb_lYsF.js"></script>
+    <script type="module" crossorigin src="/goit_final_js_project/assets/main-MCvIjsqy.js"></script>
+    <link rel="stylesheet" crossorigin href="/goit_final_js_project/assets/main-UJFE1WKA.css">
+  </head>
+  <body>
+    <header class="header">
+  <div class="wrapper">
+    <a href="./index.html" class="logo" aria-label="Your Energy - Home">
+      <svg class="logo-svg" width="132" height="14" aria-hidden="true">
+        <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#logo"></use>
+      </svg>
+    </a>
+
+    <nav class="navigation" aria-label="Main">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="./index.html" class="nav-link" id="nav-home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="./favorites.html" class="nav-link" id="nav-favorites"
+            >Favorites</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <ul class="socials" aria-label="Social media links">
+      <li>
+        <a
+          href="https://www.facebook.com/goITclub/"
+          class="social-link"
+          aria-label="Facebook"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg class="social-icon" width="28" height="28" aria-hidden="true">
+            <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-facebook"></use>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.instagram.com/goitclub/"
+          class="social-link"
+          aria-label="Instagram"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg class="social-icon" width="28" height="28" aria-hidden="true">
+            <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-instagram"></use>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.youtube.com/c/GoIT"
+          class="social-link"
+          aria-label="YouTube"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg class="social-icon" width="28" height="28" aria-hidden="true">
+            <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-youtube"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+
+    <button
+      type="button"
+      class="burger-btn"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      id="burger-btn"
+    >
+      <svg class="burger-icon" width="32" height="32" aria-hidden="true">
+        <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-burger"></use>
+      </svg>
+    </button>
+
+    <dialog class="mobile-menu" id="mobile-menu" aria-label="Menu">
+      <div class="mobile-menu-content">
+        <button
+          type="button"
+          class="mobile-close-btn"
+          aria-label="Close menu"
+          id="mobile-close-btn"
+        >
+          <svg class="close-icon" width="32" height="32" aria-hidden="true">
+            <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-close"></use>
+          </svg>
+        </button>
+
+        <nav aria-label="Main">
+          <ul class="mobile-nav-list">
+            <li class="mobile-nav-item">
+              <a href="./index.html" class="mobile-nav-link">Home</a>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="./favorites.html" class="mobile-nav-link">Favorites</a>
+            </li>
+          </ul>
+        </nav>
+
+        <ul class="mobile-socials footer-socials" aria-label="Social media links">
+          <li>
+            <a
+              href="https://www.facebook.com/goITclub/"
+              class="social-link"
+              aria-label="Facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                class="social-icon"
+                width="28"
+                height="28"
+                aria-hidden="true"
+              >
+                <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/goitclub/"
+              class="social-link"
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                class="social-icon"
+                width="28"
+                height="28"
+                aria-hidden="true"
+              >
+                <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/c/GoIT"
+              class="social-link"
+              aria-label="YouTube"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                class="social-icon"
+                width="28"
+                height="28"
+                aria-hidden="true"
+              >
+                <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-youtube"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </dialog>
+  </div>
+</header>
+
+
+    <main class="main">
+      <div class="wrapper">
+        <section class="hero">
+  <div class="hero-content">
+    <div class="hero-title-wrapper">
+      <img src="data:image/svg+xml,%3csvg%20viewBox='0%200%2060%2060'%20xmlns='http://www.w3.org/2000/svg'%20width='60'%20height='60'%20fill='none'%3e%3cpath%20d='m27.215%2025.1-.407-1.166-.375-1.075-.977-2.8-.125-.358-.907-2.598-5.261-15.077%206.269%2014.686%201.08%202.531.149.35%201.164%202.727.447%201.047.485%201.135.099.232.043.1.08.19.161.376.014-.408.007-.207.004-.109.008-.251.042-1.234.038-1.138.1-2.964.014-.38.093-2.75L30%200l.54%2015.96.093%202.75.013.379.1%202.964.04%201.138.04%201.233.01.252.003.109.007.207.014.408.16-.375.081-.191.043-.1.099-.232.485-1.135.447-1.047%201.164-2.728.149-.349%201.08-2.53%206.27-14.687-5.262%2015.077-.907%202.598-.125.358-.977%202.8-.375%201.075-.407%201.165-.083.238-.036.103-.068.196-.134.385.285-.292.144-.148.076-.078.176-.18.862-.884.795-.815%202.071-2.123.265-.272%201.922-1.969L50.21%207.83%2039.859%2019.988l-1.783%202.095-.247.289-1.922%202.258-.738.867-.8.94-.164.191-.07.083-.135.158-.264.31.37-.169.19-.086.099-.045.228-.104%201.124-.513%201.035-.473%202.698-1.231.346-.158%202.503-1.142%2014.527-6.63-14.046%207.597-2.42%201.31-.334.18-2.608%201.411-1.001.542-1.086.587-.222.12-.096.052-.182.098-.359.194.407-.024.207-.012.11-.006.25-.015%201.233-.072%201.136-.067%202.961-.173.379-.023%202.747-.16%2015.941-.935-15.842%202.01-2.73.347-.376.048-2.942.373-1.13.143-1.224.156-.25.032-.108.013-.205.027-.405.05.388.126.198.063.103.033.24.077%201.175.378%201.084.349%202.824.907.36.117%202.62.842%2015.203%204.887-15.498-3.848-2.67-.663-.37-.091-2.878-.715-1.104-.274-1.198-.298-.245-.06-.106-.027-.2-.05-.397-.098.317.257.161.13.085.069.195.158h.001l.96.777.884.716%202.305%201.867.295.239%202.138%201.731%2012.41%2010.049-13.061-9.187-2.25-1.582-.311-.219-2.426-1.706-.931-.655-1.01-.71-.206-.145-.089-.063-.17-.119-.333-.234.203.353.103.18.054.095.125.218.614%201.071.566.988%201.476%202.573.188.329%201.369%202.387%207.942%2013.854-8.861-13.285-1.527-2.29-1.856-2.782-.632-.947-.685-1.027-.14-.21-.06-.09-.115-.173-.226-.339.06.403.032.205.016.108.038.248v.001l.186%201.22.171%201.126.446%202.932.057.375.414%202.72%202.402%2015.787-3.464-15.588-.597-2.686-.082-.37-.644-2.896-.247-1.111-.267-1.205-.055-.246-.024-.107-.044-.202-.09-.398-.088.398-.045.202-.024.107-.055.245-.267%201.206-.247%201.11-.644%202.896-.082.37-.597%202.687-3.463%2015.588%202.4-15.787.415-2.72.057-.375.446-2.932.171-1.126.186-1.22.038-.25.016-.107.031-.205.061-.403-.226.34-.115.172-.06.09-.14.21-.685%201.027-.632.947-1.646%202.467-.21.316-1.527%202.289-8.861%2013.285%207.942-13.854%201.369-2.387.188-.33%201.476-2.572.566-.988.614-1.07v-.001l.125-.218.054-.095.103-.18.203-.353-.334.234-.169.12-.09.062-.205.145-1.01.71-.93.655-2.427%201.706-.31.219-2.25%201.582L6.058%2048.08%2018.47%2038.03l2.14-1.731.294-.24%202.305-1.866.885-.716.96-.777.195-.158.085-.069.16-.13.318-.257-.396.098-.201.05-.106.026-.244.061-1.199.298-1.104.274-2.879.715-.368.091-2.67.663L1.144%2038.21l15.203-4.887%202.62-.842.36-.117%202.824-.907%201.084-.349%201.175-.378.24-.077.104-.033.197-.063.388-.125-.405-.051-.205-.027-.108-.013-.25-.032-1.225-.155-1.129-.144-2.942-.373-.377-.048-2.73-.346L.129%2027.232l15.941.934%202.747.162.379.022%202.96.173%201.137.067%201.232.072.252.015.109.006.206.012.408.024-.36-.194-.181-.098-.096-.052-.221-.12-1.086-.587-1.002-.542-2.608-1.411-.334-.18-2.42-1.31-14.046-7.597%2014.527%206.63%202.503%201.142.346.158%202.698%201.231%201.035.473%201.123.512.23.105.099.045.188.086.371.17-.264-.31-.134-.159-.071-.083-.163-.191-.8-.94-.739-.867-1.922-2.258-.247-.29-1.783-2.094L9.789%207.83%2020.94%2019.26l1.922%201.97.265.271%202.07%202.123.796.815.862.883.176.18.076.079.145.148.284.292-.134-.385-.068-.196-.036-.103zM30%2026.121l-1.401.262-1.212.75-.859%201.137-.39%201.371.132%201.42.635%201.275%201.053.96%201.33.515h1.425l1.329-.514%201.053-.96.635-1.277.132-1.419-.39-1.37-.86-1.138-1.211-.75z'%20fill='%23242424'%20fill-rule='evenodd'/%3e%3c/svg%3e" alt="" class="hero-star-icon">
+      <h1 class="hero-title">Get <i>Body</i> in shape, Stay healthy</h1>
+    </div>
+    <p class="hero-description">
+      Transform your physique and embrace a healthier lifestyle with our comprehensive fitness and
+      nutrition support.
+    </p>
+  </div>
+
+  <div class="hero-image-wrapper">
+    <picture>
+      <!-- Mobile: до 767px -->
+      <source
+        media="(max-width: 767px)"
+        type="image/webp"
+        srcset="/goit_final_js_project/assets/m_hero-WA6vGlhn.webp 1x, /goit_final_js_project/assets/m_hero@2x-C5rHxFfB.webp 2x"
+      >
+      <source
+        media="(max-width: 767px)"
+        type="image/jpeg"
+        srcset="/goit_final_js_project/assets/m_hero-B_uOpNDd.jpg 1x, /goit_final_js_project/assets/m_hero@2x-DnRcQ_OW.jpg 2x"
+      >
+
+      <!-- Tablet: 768px - 1440px -->
+      <source
+        media="(min-width: 768px) and (max-width: 1440px)"
+        type="image/webp"
+        srcset="/goit_final_js_project/assets/t_hero-C1EnVvh8.webp 1x, /goit_final_js_project/assets/t_hero@2x-BOXlOnyA.webp 2x"
+      >
+      <source
+        media="(min-width: 768px) and (max-width: 1440px)"
+        type="image/jpeg"
+        srcset="/goit_final_js_project/assets/t_hero-CnCrbLC7.jpg 1x, /goit_final_js_project/assets/t_hero@2x-YX_Er8AL.jpg 2x"
+      >
+
+      <!-- Desktop: від 1440px -->
+      <source
+        media="(min-width: 1440px)"
+        type="image/webp"
+        srcset="/goit_final_js_project/assets/d_hero-4RRyp6TV.webp 1x, /goit_final_js_project/assets/d_hero@2x-cCXP66Xx.webp 2x"
+      >
+      <source
+        media="(min-width: 1440px)"
+        type="image/jpeg"
+        srcset="/goit_final_js_project/assets/d_hero-C6SiRQUR.jpg 1x, /goit_final_js_project/assets/d_hero@2x-B-JM20Yz.jpg 2x"
+      >
+
+      <img
+        src="/goit_final_js_project/assets/d_hero-C6SiRQUR.jpg"
+        alt="Working out together"
+        class="hero-img-large"
+        width="1376"
+        height="574"
+        loading="eager"
+        fetchpriority="high"
+      >
+    </picture>
+  </div>
+
+  <div class="hero-right">
+    <picture>
+      <!-- Desktop: від 1440px (на mobile та tablet hero-right не відображається) -->
+      <source
+        type="image/webp"
+        srcset="data:image/webp;base64,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 1x, /goit_final_js_project/assets/d_tag@2x-Dsu_Y1AZ.webp 2x"
+      >
+      <source
+        type="image/jpeg"
+        srcset="/goit_final_js_project/assets/d_tag-Cx6T6olo.jpg 1x, /goit_final_js_project/assets/d_tag@2x-BJhz56Bb.jpg 2x"
+      >
+
+      <img
+        src="/goit_final_js_project/assets/d_tag-Cx6T6olo.jpg"
+        alt="Workout"
+        class="hero-img-small"
+        width="168"
+        height="100"
+        loading="eager"
+      >
+    </picture>
+    <div class="hero-tags" aria-hidden="true">
+      <span class="tag">#Sport</span>
+      <span class="tag">#Healthy</span>
+      <span class="tag">#Workout</span>
+      <span class="tag">#Diet</span>
+    </div>
+  </div>
+</section>
+
+
+        <section class="filters-section">
+  <div class="filters-header">
+    <h2 class="section-title" id="section-title">Exercises</h2>
+    <div class="filters-controls">
+      <form id="exercise-search-form" class="exercise-search-form hidden">
+        <input
+          type="text"
+          id="exercise-search-input"
+          class="exercise-search-input"
+          placeholder="Search"
+          aria-label="Search exercises"
+        >
+        <button type="button" class="exercise-clear-btn hidden" id="exercise-clear-btn" aria-label="Clear search">
+          <svg width="18" height="18" aria-hidden="true" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-close"></use>
+          </svg>
+        </button>
+        <button type="submit" class="exercise-search-btn" aria-label="Search">
+          <svg width="18" height="18" aria-hidden="true" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-search"></use>
+          </svg>
+        </button>
+      </form>
+      <ul id="filter-tabs" class="filter-tabs" role="tablist" aria-label="Filter by category">
+        <li role="presentation">
+          <button class="filter-tab active" role="tab" aria-selected="true" data-filter="Muscles">Muscles</button>
+        </li>
+        <li role="presentation">
+          <button class="filter-tab" role="tab" aria-selected="false" data-filter="Body parts">Body parts</button>
+        </li>
+        <li role="presentation">
+          <button class="filter-tab" role="tab" aria-selected="false" data-filter="Equipment">Equipment</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+        <div class="main-content">
+          <section class="content-area" aria-labelledby="exercises-heading">
+            <h2 id="exercises-heading" class="visually-hidden">
+              Exercises List
+            </h2>
+            <ul
+              id="workouts-container"
+              class="sections-grid"
+              aria-live="polite"
+              aria-busy="false"
+            ></ul>
+            <nav id="pager-container" aria-label="Pagination"></nav>
+          </section>
+
+          <section class="panel" aria-label="Additional information">
+            <article class="motivation-card">
+  <span class="motivation-icon" aria-hidden="true">
+    <svg width="20" height="20">
+      <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-quote"></use>
+    </svg>
+  </span>
+  <div class="motivation-main">
+    <div class="motivation-header">
+      <p class="motivation-title">Quote of the day</p>
+      <svg class="motivation-decoration" aria-hidden="true">
+        <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-quote-bg"></use>
+      </svg>
+    </div>
+    <blockquote id="motivation-text" class="motivation-text">
+      A lot of times I find that people who are blessed with the most talent don't ever develop that
+      attitude, and the ones who aren't blessed in that way are the most competitive and have the
+      biggest heart.
+    </blockquote>
+    <cite id="motivation-author" class="motivation-author">Tom Brady</cite>
+  </div>
+</article>
+
+            <div class="panel-image-card">
+  <picture>
+    <!-- Mobile: до 767px -->
+    <source
+      media="(max-width: 767px)"
+      type="image/webp"
+      srcset="/goit_final_js_project/assets/m_side-cfHPmJ1t.webp 1x, /goit_final_js_project/assets/m_side@2x-Dxp8CIJl.webp 2x"
+    >
+    <source
+      media="(max-width: 767px)"
+      type="image/jpeg"
+      srcset="/goit_final_js_project/assets/m_side-BvwjWO0U.jpg 1x, /goit_final_js_project/assets/m_side@2x-DW29wzoi.jpg 2x"
+    >
+
+    <!-- Tablet: 768px - 1440px -->
+    <source
+      media="(min-width: 768px) and (max-width: 1440px)"
+      type="image/webp"
+      srcset="/goit_final_js_project/assets/t_side-BI8auxRS.webp 1x, /goit_final_js_project/assets/t_side@2x-C8MBpUiU.webp 2x"
+    >
+    <source
+      media="(min-width: 768px) and (max-width: 1440px)"
+      type="image/jpeg"
+      srcset="/goit_final_js_project/assets/t_side-CLgsV1FZ.jpg 1x, /goit_final_js_project/assets/t_side@2x-BteMrhJH.jpg 2x"
+    >
+
+    <!-- Desktop: від 1440px -->
+    <source
+      media="(min-width: 1440px)"
+      type="image/webp"
+      srcset="/goit_final_js_project/assets/d_side-Df1hNwRr.webp 1x, /goit_final_js_project/assets/d_side@2x-BA2gUMLV.webp 2x"
+    >
+    <source
+      media="(min-width: 1440px)"
+      type="image/jpeg"
+      srcset="/goit_final_js_project/assets/d_side-fln7l_1p.jpg 1x, /goit_final_js_project/assets/d_side@2x-CHX75Hc2.jpg 2x"
+    >
+
+    <img src="/goit_final_js_project/assets/d_side-fln7l_1p.jpg" alt="Women doing sports" class="panel-image" width="335" height="571" loading="lazy">
+  </picture>
+</div>
+
+            <aside class="info-tile" aria-labelledby="info-tile-heading">
+  <h3 id="info-tile-heading" class="visually-hidden">Sports benefits information</h3>
+  <div class="info-header">
+    <span class="info-icon">
+      <svg width="20" height="20" aria-hidden="true">
+        <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-info"></use>
+      </svg>
+    </span>
+    <div class="info-content">
+      <div class="info-time">
+        <time datetime="PT110M" class="info-time-value">110 min</time>
+        <div class="info-time-label">Daily norm of sports</div>
+      </div>
+      <p class="info-text">
+        The World Health Organization recommends at least 150 minutes of moderate-intensity aerobic
+        physical activity throughout the week for adults aged 18-64. However, what happens if we
+        adjust that number to 110 minutes every day? While it might seem like a high number to hit,
+        dedicating 110 minutes daily to sporting activities may offer unparalleled benefits to
+        physical health, mental well-being, and overall quality of life.
+      </p>
+    </div>
+  </div>
+</aside>
+
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+  <div class="wrapper">
+    <div class="footer-wrapper">
+      <div class="footer-info">
+        <div class="footer-logo">
+          <a href="./index.html" aria-label="Your Energy - Home">
+            <svg class="logo-svg" width="132" height="14" aria-hidden="true">
+              <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#logo"></use>
+            </svg>
+          </a>
+        </div>
+        <ul class="footer-socials">
+          <li>
+            <a
+              href="https://www.facebook.com/goITclub/"
+              class="social-link"
+              aria-label="Visit our Facebook page"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                class="social-icon"
+                width="28"
+                height="28"
+                aria-hidden="true"
+              >
+                <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/goitclub/"
+              class="social-link"
+              aria-label="Visit our Instagram page"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                class="social-icon"
+                width="28"
+                height="28"
+                aria-hidden="true"
+              >
+                <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/c/GoIT"
+              class="social-link"
+              aria-label="Visit our YouTube channel"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                class="social-icon"
+                width="28"
+                height="28"
+                aria-hidden="true"
+              >
+                <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-youtube"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <p class="footer-slogan">Transforming your <i>body</i> shape with us</p>
+
+      <div class="footer-subscription">
+        <h2 class="subscription-title">
+          Subscribe and learn about new exercises!
+        </h2>
+        <form
+          id="subscription-form"
+          class="subscription-form"
+          aria-label="Newsletter subscription"
+        >
+          <label for="subscription-email" class="visually-hidden"
+            >Email address</label
+          >
+          <input
+            type="email"
+            id="subscription-email"
+            name="email"
+            placeholder="Email"
+            required
+            pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+            title="Please enter a valid email address (e.g., example@domain.com)"
+            class="subscription-input"
+            autocomplete="email"
+          />
+          <button type="submit" class="btn btn-outline">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-rights">Your Energy. All rights reserved.</p>
+      <nav class="footer-nav" aria-label="Legal information">
+        <ul class="footer-nav-list">
+          <li><a href="#privacy-policy">Privacy Policy</a></li>
+          <li aria-hidden="true">/</li>
+          <li><a href="#terms-of-service">Terms of Service</a></li>
+        </ul>
+      </nav>
+      <p class="footer-copyright">©2023</p>
+    </div>
+  </div>
+</footer>
+
+    <div class="modal hidden" id="workout-modal" role="dialog" aria-modal="true">
+  <div class="modal-backdrop" id="workout-modal-backdrop"></div>
+  <div class="modal-content workout-popup" id="workout-popup">
+  <button class="modal-close" id="modal-close-btn" aria-label="Close details">
+    <svg width="28" height="28" aria-hidden="true">
+      <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-close"></use>
+    </svg>
+  </button>
+
+  <div class="workout-popup-gif">
+    <img
+      id="modal-workout-gif"
+      src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%3E%3C/svg%3E"
+      alt="Exercise demonstration"
+      loading="lazy"
+    />
+  </div>
+
+  <div class="workout-popup-info">
+    <h2 class="workout-popup-title" id="modal-workout-title">Air bake</h2>
+
+    <div class="workout-popup-rating" id="modal-workout-rating">
+      <span class="rating-value">4.0</span>
+      <div class="rating-stars" aria-hidden="true">
+        <svg
+          class="star filled"
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+        >
+          <path
+            d="M9 1.5L11.3175 6.195L16.5 6.9525L12.75 10.605L13.635 15.765L9 13.3275L4.365 15.765L5.25 10.605L1.5 6.9525L6.6825 6.195L9 1.5Z"
+            fill="#EEA10C"
+          />
+        </svg>
+        <svg
+          class="star filled"
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+        >
+          <path
+            d="M9 1.5L11.3175 6.195L16.5 6.9525L12.75 10.605L13.635 15.765L9 13.3275L4.365 15.765L5.25 10.605L1.5 6.9525L6.6825 6.195L9 1.5Z"
+            fill="#EEA10C"
+          />
+        </svg>
+        <svg
+          class="star filled"
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+        >
+          <path
+            d="M9 1.5L11.3175 6.195L16.5 6.9525L12.75 10.605L13.635 15.765L9 13.3275L4.365 15.765L5.25 10.605L1.5 6.9525L6.6825 6.195L9 1.5Z"
+            fill="#EEA10C"
+          />
+        </svg>
+        <svg
+          class="star filled"
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+        >
+          <path
+            d="M9 1.5L11.3175 6.195L16.5 6.9525L12.75 10.605L13.635 15.765L9 13.3275L4.365 15.765L5.25 10.605L1.5 6.9525L6.6825 6.195L9 1.5Z"
+            fill="#EEA10C"
+          />
+        </svg>
+        <svg
+          class="star"
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+        >
+          <path
+            d="M9 1.5L11.3175 6.195L16.5 6.9525L12.75 10.605L13.635 15.765L9 13.3275L4.365 15.765L5.25 10.605L1.5 6.9525L6.6825 6.195L9 1.5Z"
+            fill="rgba(244, 244, 244, 0.2)"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <hr class="workout-popup-separator" />
+
+    <dl class="workout-popup-details">
+      <div class="detail-item">
+        <dt class="detail-label">Target</dt>
+        <dd class="detail-value" id="modal-target">Abs</dd>
+      </div>
+      <div class="detail-item">
+        <dt class="detail-label">Body Part</dt>
+        <dd class="detail-value" id="modal-bodypart">Waist</dd>
+      </div>
+      <div class="detail-item">
+        <dt class="detail-label">Equipment</dt>
+        <dd class="detail-value" id="modal-equipment">Body weight</dd>
+      </div>
+      <div class="detail-item">
+        <dt class="detail-label">Popular</dt>
+        <dd class="detail-value" id="modal-popular">150</dd>
+      </div>
+      <div class="detail-item">
+        <dt class="detail-label">Burned calories</dt>
+        <dd class="detail-value" id="modal-calories">323/3 min</dd>
+      </div>
+    </dl>
+    
+    <hr class="workout-popup-separator" />
+
+    <p class="workout-popup-description" id="modal-description">
+      This refers to your core muscles, which include the rectus abdominis,
+      obliques, and transverse abdominis. They're essential for maintaining
+      posture, stability, and generating force in many movements. Exercises
+      that target the abs include crunches, leg raises, and planks.
+    </p>
+
+    <div class="workout-popup-actions">
+      <button class="btn btn-outline" id="add-to-favorites-btn">
+        <span class="btn-text">Add to favorites</span>
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M10 3.5C10 3.5 6.5 1 3.5 3.5C0.5 6 2 10 10 16.5C18 10 19.5 6 16.5 3.5C13.5 1 10 3.5 10 3.5Z"
+            stroke="currentColor"
+            stroke-width="1.5"
+          />
+        </svg>
+      </button>
+      <button class="btn btn-outline" id="give-rating-btn">
+        Give a rating
+      </button>
+    </div>
+  </div>
+  </div>
+</div>
+
+    <div class="modal hidden" id="rating-modal" role="dialog" aria-modal="true">
+  <div class="modal-backdrop" id="rating-modal-backdrop"></div>
+  <div class="modal-content rating-popup" id="rating-popup">
+    <button type="button" class="modal-close" id="rating-popup-close-btn" aria-label="Close rating modal">
+      <svg width="28" height="28" aria-hidden="true">
+        <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-close"></use>
+      </svg>
+    </button>
+
+    <div class="rating-popup-content">
+      <form id="rating-form" class="rating-form">
+        <p class="rating-popup-title" id="rating-popup-title">Rating</p>
+
+        <div class="rating-body">
+          <p class="rating-display-value" id="rating-display-value">0.0</p>
+
+          <fieldset class="rating-stars-form" id="rating-stars" aria-label="Rating stars">
+            <label class="rating-label" aria-label="5 stars">
+              <input type="radio" name="rating" value="5" class="rating-radio" required>
+              <svg width="24" height="24" aria-hidden="true">
+                <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-star"></use>
+              </svg>
+            </label>
+
+            <label class="rating-label" aria-label="4 stars">
+              <input type="radio" name="rating" value="4" class="rating-radio">
+              <svg width="24" height="24" aria-hidden="true">
+                <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-star"></use>
+              </svg>
+            </label>
+
+            <label class="rating-label" aria-label="3 stars">
+              <input type="radio" name="rating" value="3" class="rating-radio">
+              <svg width="24" height="24" aria-hidden="true">
+                <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-star"></use>
+              </svg>
+            </label>
+
+            <label class="rating-label" aria-label="2 stars">
+              <input type="radio" name="rating" value="2" class="rating-radio">
+              <svg width="24" height="24" aria-hidden="true">
+                <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-star"></use>
+              </svg>
+            </label>
+
+            <label class="rating-label" aria-label="1 star">
+              <input type="radio" name="rating" value="1" class="rating-radio">
+              <svg width="24" height="24" aria-hidden="true">
+                <use href="/goit_final_js_project/assets/sprite-b50_DFWG.svg#icon-star"></use>
+              </svg>
+            </label>
+          </fieldset>
+        </div>
+
+        <label for="rating-email" class="visually-hidden">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="rating-email"
+          placeholder="Email"
+          required
+          class="rating-email-input"
+          autocomplete="email"
+        >
+
+        <label for="rating-review" class="visually-hidden">Your comment</label>
+        <textarea
+          name="review"
+          id="rating-review"
+          placeholder="Your comment"
+          class="rating-review-input"
+          rows="3"
+        ></textarea>
+
+        <div class="rating-form-actions">
+          <button type="submit" class="btn btn-outline">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+    
+  </body>
+</html>
