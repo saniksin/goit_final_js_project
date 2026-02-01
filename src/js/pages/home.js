@@ -135,10 +135,10 @@ function setupFilterTabs() {
 
     document.querySelectorAll('.filter-tab').forEach(t => {
       t.classList.remove('active');
-      t.setAttribute('aria-selected', 'false');
+      t.setAttribute('aria-pressed', 'false');
     });
     btn.classList.add('active');
-    btn.setAttribute('aria-selected', 'true');
+    btn.setAttribute('aria-pressed', 'true');
 
     state.filter = btn.dataset.filter;
     state.view = 'categories';
