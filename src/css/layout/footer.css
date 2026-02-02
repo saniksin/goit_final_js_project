@@ -183,6 +183,7 @@
     display: grid;
     grid-template-columns: 3fr 2fr 1fr;
     gap: 0;
+    padding-top: 64px;
   }
 
   .footer-copyright {
@@ -202,6 +203,7 @@
 
   .footer-bottom {
     grid-template-columns: 1fr 2fr 1fr;
+    padding-top: 70px;
   }
 
   .footer-copyright {
