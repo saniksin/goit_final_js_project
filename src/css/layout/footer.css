@@ -5,7 +5,7 @@
 .footer {
   display: flex;
   flex-direction: column;
-  padding: var(--space-40) var(--space-20) 10px;
+  padding: var(--space-40) 0 10px;
   background-color: var(--color-dark);
   color: var(--color-light);
 }
@@ -144,7 +144,7 @@
 
 @media (min-width: 768px) {
   .footer {
-    padding: var(--space-64) var(--space-32) var(--space-16);
+    padding: var(--space-64) 0 var(--space-16);
   }
 
   .footer-wrapper {
@@ -199,6 +199,14 @@
   .footer-wrapper {
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas: 'info slogan subscription';
+  }
+
+  .footer-slogan {
+    margin: 0;
+  }
+
+  .footer-socials {
+    margin: var(--space-20) 0 0 0;
   }
 
   .footer-bottom {

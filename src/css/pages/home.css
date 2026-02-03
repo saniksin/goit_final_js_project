@@ -7,9 +7,12 @@
    ========================================================================== */
 
 .hero {
+  padding-bottom: var(--space-40);
+}
+
+.hero .container {
   display: flex;
   flex-direction: column;
-  padding-bottom: var(--space-40);
 }
 
 .hero-content {
@@ -315,7 +318,7 @@
    ========================================================================== */
 
 @media (min-width: 1440px) {
-  .hero {
+  .hero .container {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;

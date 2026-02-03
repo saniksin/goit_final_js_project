@@ -45,19 +45,20 @@ button {
    LAYOUT CONTAINERS
    ========================================================================== */
 
-.wrapper {
+.container {
+  width: 100%;
   max-width: 375px;
   margin-inline: auto;
+  padding-inline: 20px;
 }
 
 .main {
   display: flex;
-  justify-content: center;
-}
-
-.main > .wrapper {
-  flex-grow: 1;
-  padding: 60px var(--space-20) 80px;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 80px;
+  gap: 40px;
 }
 
 /* ==========================================================================
@@ -90,12 +91,14 @@ body.modal-open {
    ========================================================================== */
 
 @media (min-width: 768px) {
-  .wrapper {
+  .container {
     max-width: 768px;
+    padding-inline: 32px;
   }
 
-  .main > .wrapper {
-    padding: 76px var(--space-32) 100px;
+  .main {
+    padding-top: 76px;
+    padding-bottom: 100px;
   }
 }
 
@@ -104,11 +107,11 @@ body.modal-open {
    ========================================================================== */
 
 @media (min-width: 1440px) {
-  .wrapper {
+  .container {
     max-width: 1440px;
   }
 
-  .main > .wrapper {
+  .main {
     padding-top: 64px;
     padding-bottom: 132px;
   }
