@@ -56,7 +56,16 @@ export function closePopup(popupId) {
   modal.classList.add('hidden');
   activePopupIds = activePopupIds.filter(id => id !== popupId);
 
-  if (activePopupIds.length === 0) {
+  let reopenedWorkout = false;
+  if (popupId === 'rating-modal') {
+    const workoutModal = document.getElementById('workout-modal');
+    if (workoutModal) {
+      openPopup('workout-modal');
+      reopenedWorkout = true;
+    }
+  }
+
+  if (!reopenedWorkout && activePopupIds.length === 0) {
     document.body.classList.remove('modal-open');
     document.removeEventListener('keydown', handleEscKey);
   }
