@@ -2,6 +2,7 @@
  * Favorites Page Controller
  */
 
+import { getExerciseById } from '../api/exercises.js';
 import { getFavorites, removeFavorite } from '../services/favorites-store.js';
 import { renderFavoritesList } from '../templates/renderer.js';
 import { renderPager, setupPager } from '../ui/pagination.js';
@@ -20,13 +21,33 @@ const state = {
 /**
  * Render favorites with pagination
  */
+async function fetchFavoritesByIds(ids) {
+  const results = await Promise.allSettled(ids.map(id => getExerciseById(id)));
+  const favorites = [];
+  const missingIds = [];
+
+  results.forEach((result, index) => {
+    if (result.status === 'fulfilled' && result.value) {
+      favorites.push(result.value);
+    } else {
+      missingIds.push(ids[index]);
+    }
+  });
+
+  if (missingIds.length) {
+    missingIds.forEach(id => removeFavorite(id));
+  }
+
+  return favorites;
+}
+
 async function renderFavorites() {
   const container = $('favorites-container');
   if (!container) return;
 
-  const allFavorites = getFavorites();
+  const favoriteIds = getFavorites();
 
-  if (allFavorites.length === 0) {
+  if (favoriteIds.length === 0) {
     await renderFavoritesList([], 'favorites-container');
     renderPager(1, 1, 'favorites-pager');
     return;
@@ -34,7 +55,7 @@ async function renderFavorites() {
 
   const perPage = getFavoritesPerPage();
   const shouldPaginate = shouldPaginateFavorites();
-  const totalPages = shouldPaginate ? Math.ceil(allFavorites.length / perPage) : 1;
+  const totalPages = shouldPaginate ? Math.ceil(favoriteIds.length / perPage) : 1;
 
   // Ensure current page is valid
   if (state.page > totalPages) {
@@ -43,8 +64,15 @@ async function renderFavorites() {
 
   // Get items for current page
   const startIndex = shouldPaginate ? (state.page - 1) * perPage : 0;
-  const endIndex = shouldPaginate ? startIndex + perPage : allFavorites.length;
-  const favorites = allFavorites.slice(startIndex, endIndex);
+  const endIndex = shouldPaginate ? startIndex + perPage : favoriteIds.length;
+  const pagedIds = favoriteIds.slice(startIndex, endIndex);
+  const favorites = await fetchFavoritesByIds(pagedIds);
+
+  if (favorites.length === 0 && getFavorites().length === 0) {
+    await renderFavoritesList([], 'favorites-container');
+    renderPager(1, 1, 'favorites-pager');
+    return;
+  }
 
   await renderFavoritesList(favorites, 'favorites-container');
 
