@@ -1,25 +1,75 @@
-# Your Energy - Vanilla JS Project
+# Your Energy — Fitness Exercises App
 
-Цей проєкт створено на основі [vanilla-app-template](https://github.com/goitacademy/vanilla-app-template).
-Застосунок дозволяє переглядати вправи та тренування.
+Вебзастосунок для перегляду каталогу вправ, пошуку за категоріями та керування обраними. Проєкт побудований на Vite та Vanilla JS, адаптивний для мобільних, планшетів і десктопів.
+
+## Демо
+- Live: https://saniksin.github.io/goit_final_js_project/
+
+## Можливості
+- Каталог вправ із фільтрами **Muscles / Body parts / Equipment**
+- Пошук і пагінація
+- Модальне вікно з деталями вправи та рейтингом
+- Обрані вправи (зберігаються **ID** у localStorage, дані оновлюються з API)
+- Цитата дня
+- Повністю адаптивна верстка
 
 ## Технології
-- HTML5
-- CSS3
-- Vanilla JavaScript
+- HTML5, CSS3
+- Vanilla JavaScript (ES Modules)
 - Vite
+- Axios
+- modern-normalize
 
-## Запуск локально
-1. Встановіть залежності:
-   ```bash
-   npm install
-   ```
-2. Запустіть режим розробки:
-   ```bash
-   npm run dev
-   ```
-3. Відкрийте браузер за посиланням, яке з'явиться в терміналі (зазвичай `http://localhost:4173`).
+## Швидкий старт
+
+### Вимоги
+- Node.js (LTS)
+
+### Встановлення
+```bash
+npm install
+```
+
+### Розробка
+```bash
+npm run dev
+```
+
+### Збірка
+```bash
+npm run build
+```
+
+### Перегляд зібраної версії
+```bash
+npm run preview
+```
+
+> Збірка виконується з базою `/goit_final_js_project/` для коректної роботи на GitHub Pages.
+
+## Структура проєкту
+```
+src/
+  css/            # стилі
+  fonts/          # шрифти
+  img/            # статичні зображення
+  js/             # логіка застосунку
+  partials/       # HTML-частини (інжект через Vite)
+  index.html
+  favorites.html
+```
+
+## API
+Базовий URL: `https://your-energy.b.goit.study/api`
+
+Використовуються ендпоінти:
+- `GET /quote` — цитата дня
+- `GET /filters` — категорії
+- `GET /exercises` — список вправ
+- `GET /exercises/:id` — деталі вправи
+- `PATCH /exercises/:id/rating` — відправка рейтингу
+- `POST /subscription` — підписка
 
 ## Деплой
-Проєкт розгорнуто за допомогою GitHub Pages.
-[Посилання на живу сторінку](https://saniksin.github.io/goit_final_js_project/) (замініть на актуальне посилання)
+Проєкт розгорнуто на GitHub Pages. Збірка знаходиться в `dist/`.
+
