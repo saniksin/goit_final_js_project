@@ -211,6 +211,7 @@
     display: grid;
     grid-template-columns: 400px 1fr;
     gap: var(--space-32) var(--space-16);
+    min-height: auto;
   }
 }
 
